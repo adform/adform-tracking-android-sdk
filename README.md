@@ -7,23 +7,25 @@ Adform brings brand advertising to the programmatic era at scale, making display
 * Adform Tracking SDK runs on Android 2.3.* (API 10), so created project version should be 2.3.* (API 10) and above
 * Also the instructions described here are done on IntelliJ 13.1. These instructions should be compatible with Android Studio also
 
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_01.png)
+
 ## 2. Copy the contents of the libs folder directly the libs/ folder of your project.
 
 * Download project library `AdformTrackingSdk-0.1.9.jar` latest version.
 * Insert library into your project
 
-![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_01.png)
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_02.png)
 
 * Right click it and hit `Add as Library...`
 
-![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_02.png)
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_03.png)
 
 ## 3. Set up Google Play and Adform Tracking SDK
 
 * Project has 2 `build.gradle` files (one for top project and one for project module). Update module `build.gradle` file by inserting `Google Play` services and `Adform Tracking SDK`
 * How to add Google Play Services to Your Project please follow these instructions: https://developer.android.com/google/play-services/setup.html#Setup
 
-![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_03.png)
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_04.png)
 
 ````
 apply plugin: 'com.android.application'
