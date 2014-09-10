@@ -157,6 +157,7 @@ public void onClick(View v) {
 protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
 
+	Tracking.setDefaultApplicationName("Custom Application Name");
 	Tracking.startTracking(getApplicationContext(), 123456);
 
 	setContentView(R.layout.activity_my);
