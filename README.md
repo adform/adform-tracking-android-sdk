@@ -147,3 +147,18 @@ public void onClick(View v) {
 	Tracking.sendTrackingEvent(trackingPoint);
 }
 ````
+
+* Setting custom app name for the app
+
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_09.png)
+
+````
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+
+	Tracking.startTracking(getApplicationContext(), 123456);
+
+	setContentView(R.layout.activity_my);
+}
+````
