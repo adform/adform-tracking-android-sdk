@@ -123,3 +123,27 @@ protected void onStop() {
 ````
 
 Thats it! You are ready to go.
+
+## 5. Custom Adform Tracking SDK implementations
+
+* Sending tracking events manualy
+
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_08.png)
+
+````
+public void onClick(View v) {
+	TrackingPoint trackingPoint = new TrackingPoint(123456);
+
+        trackingPoint.setSectionName("Custom Section Name");
+
+        Map<String, String> map = new HashMap();
+
+        map.put("var1", "Custom Variable 1");
+        map.put("var2", "Custom Variable 2");
+        map.put("var3", "Custom Variable 3");
+
+        trackingPoint.setCustomParameters(map);
+
+        Tracking.sendTrackingEvent(trackingPoint);
+    }
+````
