@@ -148,7 +148,7 @@ public void onClick(View v) {
 }
 ````
 
-* Setting custom app name for the app
+* Setting Custom App Name for Tracking Point
 
 ![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_09.png)
 
