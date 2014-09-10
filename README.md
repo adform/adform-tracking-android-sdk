@@ -11,7 +11,7 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 
 ## 2. Copy the contents of the libs folder directly the libs/ folder of your project.
 
-* Download project library `AdformTrackingSdk-0.1.9.jar` latest version.
+* Download project library `AdformTrackingSdk-0.1.0.jar` latest version.
 * Insert library into your project
 
 ![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_02.png)
