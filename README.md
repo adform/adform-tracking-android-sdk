@@ -60,30 +60,30 @@ Everything should look something like this:
 * Update AndroidManifest.xml with snippet shown below between <manifest></manifest> tags
 
 	<uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 * Update AndroidManifest.xml with snipped shown below between <application></application> tags
 
 	<service
-    	android:enabled="true"
-        android:name="com.adform.adformtrackingsdk.services.TrackingService"
-        android:process=":TrackingService" />
+    		android:enabled="true"
+        	android:name="com.adform.adformtrackingsdk.services.TrackingService"
+		android:process=":TrackingService" />
 
-    <provider
-        android:name="com.adform.adformtrackingsdk.database.AdformContentProvider"
-        android:authorities="@string/adform_content_provider_authorities"
-        android:process=":TrackingService" />
+	<provider
+		android:name="com.adform.adformtrackingsdk.database.AdformContentProvider"
+		android:authorities="@string/adform_content_provider_authorities"
+		android:process=":TrackingService" />
 
-    <receiver
-        android:name="com.adform.adformtrackingsdk.services.ReferrerReceiver"
-        android:exported="true">
-        <intent-filter>
-        	<action android:name="com.android.vending.INSTALL_REFERRER" />
-        </intent-filter>
-    </receiver>
+	<receiver
+		android:name="com.adform.adformtrackingsdk.services.ReferrerReceiver"
+		android:exported="true">
+        	<intent-filter>
+			<action android:name="com.android.vending.INSTALL_REFERRER" />
+		</intent-filter>
+	</receiver>
 
-    <meta-data android:name="com.google.android.gms.version"
-    	android:value="@integer/google_play_services_version" />
+	<meta-data android:name="com.google.android.gms.version" 
+	android:value="@integer/google_play_services_version" />
 
 * Add Content Provider autorities in strings.xml parameter should be unique per appstore so add your app name at the end
 
@@ -94,16 +94,16 @@ Everything should look something like this:
 * In your main activity add the following lines of code
 
 	@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Tracking.startTracking(getApplicationContext(), 123456);
-        setContentView(R.layout.activity_my);
-    }
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		Tracking.startTracking(getApplicationContext(), 123456);
+		setContentView(R.layout.activity_my);
+	}
 
-    @Override
-    protected void onStop() {
-        Tracking.onStop();
-        super.onStop();
-    }
+	@Override
+	protected void onStop() {
+		Tracking.onStop();
+		super.onStop();
+	}
 
 Thats it! You are ready to go.
