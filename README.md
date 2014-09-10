@@ -27,6 +27,7 @@ Adform brings brand advertising to the programmatic era at scale, making display
 
 Everything should look something like this:
 
+````
 	apply plugin: 'com.android.application'
 
 	android {
@@ -54,6 +55,7 @@ Everything should look something like this:
 	    compile files('libs/AdformTrackingSdk-0.1.9.jar')
 	    compile 'com.google.android.gms:play-services:5.0.89'
 	}
+````
 
 ## 4. Update AndroidManifest.xml
 
