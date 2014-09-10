@@ -134,16 +134,16 @@ Thats it! You are ready to go.
 public void onClick(View v) {
 	TrackingPoint trackingPoint = new TrackingPoint(123456);
 
-        trackingPoint.setSectionName("Custom Section Name");
+	trackingPoint.setSectionName("Custom Section Name");
 
-        Map<String, String> map = new HashMap();
+	Map<String, String> map = new HashMap();
 
-        map.put("var1", "Custom Variable 1");
-        map.put("var2", "Custom Variable 2");
-        map.put("var3", "Custom Variable 3");
+	map.put("var1", "Custom Variable 1");
+	map.put("var2", "Custom Variable 2");
+	map.put("var3", "Custom Variable 3");
 
-        trackingPoint.setCustomParameters(map);
+	trackingPoint.setCustomParameters(map);
 
-        Tracking.sendTrackingEvent(trackingPoint);
-    }
+	Tracking.sendTrackingEvent(trackingPoint);
+}
 ````
