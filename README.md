@@ -25,8 +25,6 @@ Adform brings brand advertising to the programmatic era at scale, making display
 
 ![alt tag](http://37.157.0.44/mobilesdk/help/images/page_04.png)
 
-Everything should look something like this:
-
 ````
 apply plugin: 'com.android.application'
 
