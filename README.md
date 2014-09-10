@@ -59,6 +59,8 @@ dependencies {
 
 ## 4. Update AndroidManifest.xml
 
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_05.png)
+
 * Update AndroidManifest.xml with snippet shown below between <manifest></manifest> tags
 
 ````
@@ -70,7 +72,7 @@ dependencies {
 
 ````
 <service
-		android:enabled="true"
+	android:enabled="true"
     	android:name="com.adform.adformtrackingsdk.services.TrackingService"
 	android:process=":TrackingService" />
 
