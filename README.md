@@ -59,9 +59,9 @@ dependencies {
 
 ## 4. Update AndroidManifest.xml
 
-![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_05.png)
-
 * Update AndroidManifest.xml with snippet shown below between <manifest></manifest> tags
+
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_05.png)
 
 ````
 <uses-permission android:name="android.permission.INTERNET" />
@@ -95,11 +95,15 @@ android:value="@integer/google_play_services_version" />
 
 * Add Content Provider autorities in strings.xml parameter should be unique per appstore so add your app name at the end
 
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_06.png)
+
 ````
 <string name="adform_content_provider_authorities">com.adform.AdformContentProvider.<appname></string>
 ````
 
 ## 5. Basic Adform Tracking SDK implementation
+
+![alt tag](http://37.157.0.44/mobilesdk/help/tracking/android/image_07.png)
 
 * In your main activity add the following lines of code
 
