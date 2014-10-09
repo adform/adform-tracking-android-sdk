@@ -81,8 +81,6 @@ To start tracking, you need to 	run `startTracking` method. Note that `[tracking
 		
 A good place to put it is onCreate() method. Note that tracking start should occur before event sending. 
 
-![alt tag](screenshots/Screenshot 2014-10-09 14.02.13.png)
-
 Also, AdformTrackingSdk needs a stop method, to notify when to stop its operation.
 
     @Override
@@ -91,7 +89,7 @@ Also, AdformTrackingSdk needs a stop method, to notify when to stop its operatio
         super.onStop();
     }
 
-![alt tag](screenshots/Screenshot 2014-10-03 13.30.17.png)
+![alt tag](screenshots/Screenshot 2014-10-09 14.02.13.png)
     		
 ## Sending events    		
 To create an event, first you need to create a TrackingPoint with `[tracking id]`. 
