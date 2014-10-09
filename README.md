@@ -79,30 +79,9 @@ To start tracking, you need to 	run `startTracking` method. Note that `[tracking
 
 	AdformTrackingSdk.startTracking(getApplicationContext(), [tracking id]);
 		
-Tracking start should be started from the place, where it would not be *affected* by various application context events (like orientation change). `Application` class is perfect for this kind of behavior. Here is the most basic its implementation. 
+A good place to put it is onCreate() method. Note that tracking start should occur before event sending. 
 
-    public class DemoApplication extends Application {
-        @Override
-        public void onCreate() {
-            super.onCreate();
-            AdformTrackingSdk.startTracking(getApplicationContext(), [tracking id]);
-        }
-    }
-
-![alt tag](screenshots/Screenshot 2014-10-03 13.14.46.png)
-
-For the Android application to use this class, `android:name="[path to Application class]"` parameter should be inserted just like in the example below.
-	
-    <application
-            android:name="com.adform.trackingsdk.demoapp.DemoApplication"
-            android:icon="@drawable/ic_launcher"
-            android:label="@string/app_name">
-            
-            ....
-            
-    </application>
-    
-![alt tag](screenshots/Screenshot 2014-10-03 13.15.45.png)
+![alt tag](screenshots/Screenshot 2014-10-09 14.02.13.png)
 
 Also, AdformTrackingSdk needs a stop method, to notify when to stop its operation.
 
