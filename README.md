@@ -100,13 +100,13 @@ Also some advanced integrations are available, like custom parameter set, or usi
 
 * Setting section name: 
 
-		trackingPoint.setDefaultApplicationName("custom application name");
+		trackPoint.setAppName("custom application name");
 		
 * Adding custom parameters:
 	
 		Map<String, String> map = new HashMap();
 		map.put("key", "value");
-		trackingPoint.setCustomParameters(map);
+		trackPoint.setParameters(map);
 
 * Adding section name:
 	
