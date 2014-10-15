@@ -58,7 +58,7 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
             
-*Note that some old services were **deprecated** and AndroidManifest.xml should be updated by the new one for the sdk to work properly.*
+*Note that some old services were* ***deprecated*** *and AndroidManifest.xml should be updated by the new one for the sdk to work properly.*
 
 ![alt tag](screenshots/Screenshot 2014-10-10 13.25.17.png)
 
@@ -81,7 +81,7 @@ A good place to put it is Activity/Fragment onCreate() method. Alternatively thi
 
 Also, AdformTrackingSdk needs methods that would indicate of application activity, such as `onResume` and `onPause`. 
 
-*Note that an old method **onStop was deprecated** and will not be used in the future, so it should be deleted if it was used before.*
+*Note that an old method* ***onStop was deprecated*** *and will not be used in the future, so it should be deleted if it was used before.*
 
     @Override
     protected void onResume() {
