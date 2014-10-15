@@ -44,25 +44,23 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 		    
 * Also additional android services are needed to work properly. To add them, update `AndroidManifest.xml` with snipped shown below between `<application></application>` tags.
 
-        <service  android:enabled="true"
-                  android:name="com.adform.adformtrackingsdk.services.TrackingService"
-                  android:process=":TrackingService"/>
         <provider android:name="com.adform.adformtrackingsdk.database.AdformContentProvider"
-                  android:authorities="@string/adform_content_provider_authorities"
-                  android:process=":TrackingService"/>
-                  
+            android:authorities="@string/adform_content_provider_authorities"
+            />
         <receiver
-                android:name="com.adform.adformtrackingsdk.services.ReferrerReceiver"
-                android:exported="true">
+            android:name="com.adform.adformtrackingsdk.services.ReferrerReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
-        
-        <meta-data android:name="com.google.android.gms.version"
-	               android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+            
+*Note that some old services were **deprecated** and AndroidManifest.xml should be updated by the new one for the sdk to work properly.*
 
-![alt tag](screenshots/Screenshot 2014-10-03 13.11.08.png)
+![alt tag](screenshots/Screenshot 2014-10-10 13.25.17.png)
 
 * A unique identifier must be added in `strings.xml` file. Please note that `[appname]` should be replaced with your application name.
 	
@@ -79,26 +77,35 @@ To start tracking, you need to 	run `startTracking` method. Note that `[tracking
 
 	AdformTrackingSdk.startTracking(getApplicationContext(), [tracking id]);
 		
-A good place to put it is onCreate() method. Note that tracking start should occur before event sending. 
+A good place to put it is Activity/Fragment onCreate() method. Alternatively this can also be done in Application class, as this method should be started only once and will not take any affect when running multiple times. 
 
-Also, AdformTrackingSdk needs a stop method, to notify when to stop its operation.
+Also, AdformTrackingSdk needs methods that would indicate of application activity, such as `onResume` and `onPause`. 
+
+*Note that an old method **onStop was deprecated** and will not be used in the future, so it should be deleted if it was used before.*
 
     @Override
-    protected void onStop() {
-        AdformTrackingSdk.onStop();
-        super.onStop();
+    protected void onResume() {
+        super.onResume();
+        AdformTrackingSdk.onResume();
     }
 
-![alt tag](screenshots/Screenshot 2014-10-09 14.02.13.png)
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AdformTrackingSdk.onPause();
+    }
+    
+
+![alt tag](screenshots/Screenshot 2014-10-10 13.35.08.png)
     		
 ## Sending events    		
-To create an event, first you need to create a TrackingPoint with `[tracking id]`. 
+To create an event, first you need to create a TrackPoint with `[track id]`. Note that `startTracking` should occur before event sending.
 
 	TrackPoint trackPoint = new TrackPoint([tracking id]);
 	
-Also some advanced integrations are available, like custom parameter set, or using custom application name. 
+Also some advanced integrations are available, like custom parameter or using custom application name setting. 
 
-* Setting section name: 
+* Setting custom application name: 
 
 		trackPoint.setAppName("custom application name");
 		
@@ -110,9 +117,9 @@ Also some advanced integrations are available, like custom parameter set, or usi
 
 * Adding section name:
 	
-		trackingPoint.setSectionName("section name");
+		trackPoint.setSectionName("section name");
 		
-To send a ready tracking point, just use `sendTrackPoint`.
+To send prepared track point, just use `sendTrackPoint`.
 
 	AdformTrackingSdk.sendTrackPoint(trackPoint);
 
@@ -133,4 +140,9 @@ This also applies when you want to send custom application name.
 
 	AdformTrackingSdk.setAppName("Custom application name");
 	
+## Enable/Disable tracking
+You can enable/disable tracking tracking by calling `setEnabled(boolean)` method.
+
+	AdformTrackingSdk.setEnabled(true);
+
 
