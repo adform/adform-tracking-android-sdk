@@ -9,32 +9,31 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 
 ![alt tag](screenshots/Screenshot 2014-10-03 12.24.14.png)
 
-## 2. Copy the contents of the libs folder directly the libs/ folder of your project.
+## 2. Setting up library dependencies
 
-* Download project library `AdformTrackingSdk-x.x.x.jar` latest version. 
-* Insert library into your project.
+* To add a library to the dependencies, first we need to specify repository location. This can be done by editing `build.gradle` file and by inserting snippet (specified below) right above the `android` configuration group. 
 
-![alt tag](screenshots/Screenshot 2014-10-03 12.31.16.png)
+	    ...
+		repositories {
+    		maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
+		}
+        ...
 
-* Right click it and hit `Add as Library...`
 
-![alt tag](screenshots/Screenshot 2014-10-03 12.48.44.png)
-
-## 3. Set up Google Play and Adform Tracking SDK
-
-* AdformTrackingSdk needs Google Play services. That can be done by inserting `Google Play` service dependency into `build.gradle` file.
+* Then in the dependency group we need to specify that we will be using `AdformTrackingSdk`, and also add `Google Play` services.
 		
 	    ...
         dependencies {
-            compile 'com.google.android.gms:play-services:5.0.89'
-            compile fileTree(dir: 'libs', include: ['*.jar'])
+		    compile 'com.google.android.gms:play-services:6.1.11'
+    		compile 'com.adform.tracking.sdk:tracking-sdk:1.1'
         }
         ...
+        
 * How to add Google Play Services to Your Project please follow these instructions: https://developer.android.com/google/play-services/setup.html#Setup
 
-![alt tag](screenshots/Screenshot 2014-10-03 13.44.16.png)
+![alt tag](screenshots/Screenshot 2014-12-29 13.49.27.png)
 
-## 4. Update AndroidManifest.xml
+## 3. Update AndroidManifest.xml
 
 
 * Add internet reachability permissions. Update `AndroidManifest.xml` file with snippet shown below between `<manifest></manifest>` tags.
