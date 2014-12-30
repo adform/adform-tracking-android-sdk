@@ -124,6 +124,12 @@ To set custom application name for track point, use
 
 	TrackPoint trackPoint = new TrackPoint(12345);
 	trackPoint.setAppName("CustomAppName");
+## Setting section name
+To set section name for track point, use 
+	
+	TrackPoint trackPoint = new TrackPoint(12345);
+	trackPoint.setSectionName("CustomSection");
+
 
 ## Setting custom events
 To send custom parameters first you need to create them. 
