@@ -113,21 +113,35 @@ To send prepared track point, just use `sendTrackPoint`.
 
 ![alt tag](screenshots/Screenshot 2014-10-03 13.19.17.png)
 
-# Advanced integration
+# Custom Adform Tracking SDK implementations
 
-## Send custom events when starting track
-To send custom parameters when starting track, you can add them **before** using `startTracking` method.
+## Setting custom application name
+To set custom application name, use 
+
+	AdformTrackingSdk.setAppName("CustomApp");
+	
+To set custom application name for track point, use 
+
+	TrackPoint trackPoint = new TrackPoint(12345);
+	trackPoint.setAppName("CustomAppName");
+
+## Setting custom events
+To send custom parameters first you need to create them. 
 
     Map<String, String> map = new HashMap();
     map.put("var1", "Custom Value 1");
     map.put("var2", "Custom Value 2");
     map.put("var3", "Custom Value 3");
-    AdformTrackingSdk.setParameters(map);
     
-This also applies when you want to send custom application name.
+To send them instantly after starting track, use 
 
-	AdformTrackingSdk.setAppName("Custom application name");
+	AdformTrackingSdk.setParameters(map);
 	
+To send custom parameters with custom track point, use 
+
+	TrackPoint trackPoint = new TrackPoint(12345);
+	trackPoint.setParameters(map);
+    
 ## Enable/Disable tracking
 You can enable/disable tracking tracking by calling `setEnabled(boolean)` method.
 
