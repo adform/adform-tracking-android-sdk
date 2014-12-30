@@ -25,7 +25,7 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 	    ...
         dependencies {
 		    compile 'com.google.android.gms:play-services:6.1.11'
-    		compile 'com.adform.tracking.sdk:tracking-sdk:1.1'
+    		compile 'com.adform.tracking.sdk:tracking-sdk:0.2.0'
         }
         ...
         
@@ -43,9 +43,6 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 		    
 * Also additional android services are needed to work properly. To add them, update `AndroidManifest.xml` with snipped shown below between `<application></application>` tags.
 
-        <provider android:name="com.adform.adformtrackingsdk.database.AdformContentProvider"
-            android:authorities="@string/adform_content_provider_authorities"
-            />
         <receiver
             android:name="com.adform.adformtrackingsdk.services.ReferrerReceiver"
             android:exported="true">
@@ -57,16 +54,8 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
             
-*Note that some old services were* ***deprecated*** *and AndroidManifest.xml should be updated by the new one for the sdk to work properly.*
+![alt tag](screenshots/Screenshot 2014-12-19 17.45.33.png)
 
-![alt tag](screenshots/Screenshot 2014-10-10 13.25.17.png)
-
-* A unique identifier must be added in `strings.xml` file. Please note that `[appname]` should be replaced with your application name.
-	
-		<string name="adform_content_provider_authorities">com.adform.AdformContentProvider.[appname]</string>
-
-![alt tag](screenshots/Screenshot 2014-10-03 13.13.15.png)
-		
 Now you are set to use sdk. 
 
 # Basic integration
@@ -74,7 +63,7 @@ Now you are set to use sdk.
 		
 To start tracking, you need to 	run `startTracking` method. Note that `[tracking id]` should be replaced with your tracking id.
 
-	AdformTrackingSdk.startTracking(getApplicationContext(), [tracking id]);
+	AdformTrackingSdk.startTracking(getContext(), [tracking id]);
 		
 A good place to put it is Activity/Fragment onCreate() method. Alternatively this can also be done in Application class, as this method should be started only once and will not take any affect when running multiple times. 
 
@@ -85,7 +74,7 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
     @Override
     protected void onResume() {
         super.onResume();
-        AdformTrackingSdk.onResume();
+        AdformTrackingSdk.onResume(this);
     }
 
     @Override
