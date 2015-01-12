@@ -54,16 +54,16 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
             
-![alt tag](screenshots/Screenshot 2014-12-29 13.49.27.png)
+![alt tag](screenshots/Screenshot 2014-12-19 17.45.33.png)
 
 Now you are set to use sdk. 
 
 # Basic integration
 ## Start tracking
 		
-To start tracking, you need to 	run `startTracking` method. Note that `[tracking id]` should be replaced with your tracking id.
+To start tracking, you need to 	run `startTracking` method. Note that `[track id]` should be replaced with your tracking id.
 
-	AdformTrackingSdk.startTracking(getContext(), [tracking id]);
+	AdformTrackingSdk.startTracking(this, [track id]);
 		
 A good place to put it is Activity/Fragment onCreate() method. Alternatively this can also be done in Application class, as this method should be started only once and will not take any affect when running multiple times. 
 
@@ -89,7 +89,7 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
 ## Sending events    		
 To create an event, first you need to create a TrackPoint with `[track id]`. Note that `startTracking` should occur before event sending.
 
-	TrackPoint trackPoint = new TrackPoint([tracking id]);
+	TrackPoint trackPoint = new TrackPoint([track id]);
 	
 Also some advanced integrations are available, like custom parameter or using custom application name setting. 
 
@@ -149,7 +149,7 @@ To send custom parameters with custom track point, use
 	trackPoint.setParameters(map);
     
 ## Enable/Disable tracking
-You can enable/disable tracking tracking by calling `setEnabled(boolean)` method.
+You can enable/disable tracking by calling `setEnabled(boolean)` method.
 
 	AdformTrackingSdk.setEnabled(true);
 
