@@ -3,6 +3,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.adform.tracking.sdk</groupId>
-  <artifactId>tracking-sdk</artifactId>
+  <artifactId>adform-tracking-sdk</artifactId>
   <version>0.2.1</version>
 </project>
