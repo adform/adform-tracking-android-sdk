@@ -20,11 +20,11 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
         ...
 
 
-* Then in the dependency group we need to specify that we will be using `AdformTrackingSdk`, and also add `Google Play` services.
+* Then in the dependency group we need to specify that we will be using `AdformTrackingSdk`, and also add `Google Play Ads` service.
 		
 	    ...
         dependencies {
-		    compile 'com.google.android.gms:play-services:7.5.0'
+		    compile 'com.google.android.gms:play-services-ads:8.1.0'
     		compile 'com.adform.tracking.sdk:adform-tracking-sdk:0.2.4'
         }
         ...
