@@ -154,21 +154,25 @@ To send product variables you need to create ProductItem object and set your pro
 	ProductItem productItem = new ProductItem();
     productItem.setProductName("your_product_name");
     productItem.setProductId("74");
-    productItem.setCustom("custom_variable");
+    productItem.setCategoryName("your_category_name");
     ...
     
     TrackPoint trackPoint = new TrackPoint(12345);
     trackPoint.addProductItem(productItem);
     
-## Add SIM card state stracking
-
-To track SIM card state, please add the following code:
-
-	AdformTrackingSdk.setSendSimCardStateEnabled(true);
-    
 ## Enable/Disable tracking
 You can enable/disable tracking by calling `setEnabled(boolean)` method.
 
 	AdformTrackingSdk.setEnabled(true);
+	
+## Enable/Disable HTTPS
+You can enable/disable HTTPS protocol by calling `setHttpsEnabled(boolean)` method. By default HTTPS is enabled.
+
+	AdformTrackingSdk.setHttpsEnabled(true);
+	
+## Enable/Disable SIM card state tracking
+You can enable/disable tracking by calling `setSendSimCardStateEnabled(boolean)` method. By default SIM card state tracking is disabled.
+
+	AdformTrackingSdk.setSendSimCardStateEnabled(true);
 
 
