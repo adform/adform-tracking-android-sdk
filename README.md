@@ -125,7 +125,7 @@ To send prepared track point, just use `sendTrackPoint`.
 
 ![alt tag](screenshots/Screenshot 2014-10-03 13.19.17.png)
 
-Also it is posible to send additional product variables information with tracking points. This feature is very useful in e-cmomerce apps. To do so you need to create 'ProductItem' object and set your product values. Then add that object to the trackpoint.
+Also it is posible to send additional product variables information with tracking points. To do so you need to create 'ProductItem' object and set your product values. Then add that object to the trackpoint.
 
 	ProductItem productItem = new ProductItem();
     	productItem.setProductId("Product ID");
