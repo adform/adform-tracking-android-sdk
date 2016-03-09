@@ -61,9 +61,9 @@ Now you are set to use sdk.
 # Basic integration
 ## Start tracking
 		
-To start tracking, you need to 	run `startTracking` method. Note that `[track id]` should be replaced with your tracking id.
+To start tracking, you need to 	run `startTracking` method. Note that `Tracking_ID` should be replaced with your tracking id.
 
-	AdformTrackingSdk.startTracking(this, [track id]);
+	AdformTrackingSdk.startTracking(this, Tracking_ID);
 		
 A good place to put it is Activity/Fragment onCreate() method. Alternatively this can also be done in Application class, as this method should be started only once and will not take any affect when running multiple times. 
 
@@ -85,8 +85,18 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
     
 
 ![alt tag](screenshots/Screenshot 2014-10-10 13.35.08.png)
+ 
+ *Optionally you can set custom application name and custom variables before calling `startTracking:`.
+	
+	AdformTrackingSdk.setAppName("Custom app name");
+	
+	Map<String, String> map = new HashMap();
+	map.put("key", "value");
+	AdformTrackingSdk.setParameters(map);
+	
+	AdformTrackingSdk.startTracking(this, Tracking_ID);
     		
-## Sending events    		
+## Sending custom app events    		
 To create an event, first you need to create a TrackPoint with `[track id]`. Note that `startTracking` should occur before event sending.
 
 	TrackPoint trackPoint = new TrackPoint([track id]);
@@ -97,15 +107,17 @@ Also some advanced integrations are available, like custom parameter or using cu
 
 		trackPoint.setAppName("custom application name");
 		
-* Adding custom parameters:
+* Adding custom parameters ('key' values should be the same as it is in Adform data exports, for example sv1, sv2..sv89, var1, var2...var10, sales, orderid, etc.):
 	
 		Map<String, String> map = new HashMap();
-		map.put("key", "value");
+		map.put("key1", "value");
+		map.put("key2", "value");
+		map.put("key3", "value");
 		trackPoint.setParameters(map);
 
-* Adding section name:
+* Seting tracking point name:
 	
-		trackPoint.setSectionName("section name");
+		trackPoint.setSectionName("Tracking point name");
 		
 To send prepared track point, just use `sendTrackPoint`.
 
@@ -113,53 +125,24 @@ To send prepared track point, just use `sendTrackPoint`.
 
 ![alt tag](screenshots/Screenshot 2014-10-03 13.19.17.png)
 
-# Custom Adform Tracking SDK implementations
-
-## Setting custom application name
-To set custom application name, use 
-
-	AdformTrackingSdk.setAppName("CustomApp");
-	
-To set custom application name for track point, use 
-
-	TrackPoint trackPoint = new TrackPoint(12345);
-	trackPoint.setAppName("CustomAppName");
-## Setting section name
-To set section name for track point, use 
-	
-	TrackPoint trackPoint = new TrackPoint(12345);
-	trackPoint.setSectionName("CustomSection");
-
-
-## Setting custom events
-To send custom parameters first you need to create them. 
-
-    Map<String, String> map = new HashMap();
-    map.put("var1", "Custom Value 1");
-    map.put("var2", "Custom Value 2");
-    map.put("var3", "Custom Value 3");
-    
-To send them instantly after starting track, use 
-
-	AdformTrackingSdk.setParameters(map);
-	
-To send custom parameters with custom track point, use 
-
-	TrackPoint trackPoint = new TrackPoint(12345);
-	trackPoint.setParameters(map);
-	
-## Setting product variables
-To send product variables you need to create ProductItem object and set your product values. Then add that object to the trackpoint.
+Also it is posible to send additional product variables information with tracking points. This feature is very useful in e-cmomerce apps. To do so you need to create 'ProductItem' object and set your product values. Then add that object to the trackpoint.
 
 	ProductItem productItem = new ProductItem();
-    productItem.setProductName("your_product_name");
-    productItem.setProductId("74");
-    productItem.setCategoryName("your_category_name");
-    ...
-    
-    TrackPoint trackPoint = new TrackPoint(12345);
+    	productItem.setProductId("Product ID");
+        productItem.setProductName("Product name");
+        productItem.setCategoryId("Category ID");
+        productItem.setCategoryName("Category name");
+        productItem.setProductCount("Product count");
+        productItem.setProductSales("Product sales");
+        productItem.setWeight("Weight");
+        productItem.setStep("Step");
+        productItem.setCustom("Custom information");
+        
+    TrackPoint trackPoint = new TrackPoint(Tracking_ID);
     trackPoint.addProductItem(productItem);
     
+# Custom Adform Tracking SDK implementations
+
 ## Enable/Disable tracking
 You can enable/disable tracking by calling `setEnabled(boolean)` method.
 
