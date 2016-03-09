@@ -86,7 +86,7 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
 
 ![alt tag](screenshots/Screenshot 2014-10-10 13.35.08.png)
  
- *Optionally you can set custom application name and custom variables before calling `startTracking:`.
+ * Optionally you can set custom application name and custom variables before calling `startTracking:`.
 	
 	AdformTrackingSdk.setAppName("Custom app name");
 	
@@ -97,9 +97,9 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
 	AdformTrackingSdk.startTracking(this, Tracking_ID);
     		
 ## Sending custom app events    		
-To create an event, first you need to create a TrackPoint with `[track id]`. Note that `startTracking` should occur before event sending.
+To create an event, first you need to create a TrackPoint with `Tracking_ID`. Note that `startTracking` should occur before event sending.
 
-	TrackPoint trackPoint = new TrackPoint([track id]);
+	TrackPoint trackPoint = new TrackPoint(Tracking_ID);
 	
 Also some advanced integrations are available, like custom parameter or using custom application name setting. 
 
@@ -107,7 +107,7 @@ Also some advanced integrations are available, like custom parameter or using cu
 
 		trackPoint.setAppName("custom application name");
 		
-* Adding custom parameters ('key' values should be the same as it is in Adform data exports, for example sv1, sv2..sv89, var1, var2...var10, sales, orderid, etc.):
+* Adding custom parameters (`key` values should be the same as it is in Adform data exports, for example sv1, sv2..sv89, var1, var2...var10, sales, orderid, etc.):
 	
 		Map<String, String> map = new HashMap();
 		map.put("key1", "value");
@@ -115,7 +115,7 @@ Also some advanced integrations are available, like custom parameter or using cu
 		map.put("key3", "value");
 		trackPoint.setParameters(map);
 
-* Seting tracking point name:
+* Setting custom tracking point name:
 	
 		trackPoint.setSectionName("Tracking point name");
 		
