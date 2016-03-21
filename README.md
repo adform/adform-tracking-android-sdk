@@ -140,6 +140,35 @@ Also it is posible to send additional product variables information with trackin
         
     TrackPoint trackPoint = new TrackPoint(Tracking_ID);
     trackPoint.addProductItem(productItem);
+
+To send multiple product variables with same tracking point, you can use such code:
+
+    	ProductItem productItem1 = new ProductItem();
+    	productItem1.setProductId("Product ID");
+        productItem1.setProductName("Product name");
+        productItem1.setCategoryId("Category ID");
+        productItem1.setCategoryName("Category name");
+        productItem1.setProductCount("Product count");
+        productItem1.setProductSales("Product sales");
+        productItem1.setWeight("Weight");
+        productItem1.setStep("Step");
+        productItem1.setCustom("Custom information");
+        
+        
+    	ProductItem productItem2 = new ProductItem();
+    	productItem2.setProductId("Product ID");
+        productItem2.setProductName("Product name");
+        productItem2.setCategoryId("Category ID");
+        productItem2.setCategoryName("Category name");
+        productItem2.setProductCount("Product count");
+        productItem2.setProductSales("Product sales");
+        productItem2.setWeight("Weight");
+        productItem2.setStep("Step");
+        productItem2.setCustom("Custom information");
+        
+    TrackPoint trackPoint = new TrackPoint(Tracking_ID);
+    trackPoint.addProductItem(productItem1);
+    trackPoint.addProductItem(productItem2);
     
 # Custom Adform Tracking SDK implementations
 
