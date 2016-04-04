@@ -88,13 +88,13 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
  
  * Optionally you can set custom application name and custom variables before calling `startTracking:`.
 	
-	AdformTrackingSdk.setAppName("Custom app name");
+		AdformTrackingSdk.setAppName("Custom app name");
 	
-	Map<String, String> map = new HashMap();
-	map.put("key", "value");
-	AdformTrackingSdk.setParameters(map);
+		Map<String, String> map = new HashMap();
+		map.put("key", "value");
+		AdformTrackingSdk.setParameters(map);
 	
-	AdformTrackingSdk.startTracking(this, Tracking_ID);
+		AdformTrackingSdk.startTracking(this, Tracking_ID);
     		
 ## Sending custom app events    		
 To create an event, first you need to create a TrackPoint with `Tracking_ID`. Note that `startTracking` should occur before event sending.
