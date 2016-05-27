@@ -63,7 +63,9 @@ Now you are set to use sdk.
 		
 To start tracking, you need to 	run `startTracking` method. Note that `Tracking_ID` should be replaced with your tracking id.
 
+```java
 	AdformTrackingSdk.startTracking(this, Tracking_ID);
+```
 		
 A good place to put it is Activity/Fragment onCreate() method. Alternatively this can also be done in Application class, as this method should be started only once and will not take any affect when running multiple times. 
 
@@ -71,6 +73,7 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
 
 *Note that an old method* ***onStop was deprecated*** *and will not be used in the future, so it should be deleted if it was used before.*
 
+```java
     @Override
     protected void onResume() {
         super.onResume();
@@ -82,109 +85,194 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
         super.onPause();
         AdformTrackingSdk.onPause();
     }
+```
     
 
 ![alt tag](screenshots/Screenshot 2014-10-10 13.35.08.png)
  
  * Optionally you can set custom application name and custom variables before calling `startTracking:`.
 	
+	```java
 		AdformTrackingSdk.setAppName("Custom app name");
 	
-		Map<String, String> map = new HashMap();
-		map.put("key", "value");
-		AdformTrackingSdk.setParameters(map);
+		Order order = new Order();
+		order.setCurrency("currency");
+		order.setOrderStatus("order status");
+		order.setEmail("email");
+		order.setOrderId("order id");
+		
+		// You can also set other custom variables.
+	    order.addCustomValue(1, "var1 value"); //Set index (1-10) of custom variable and value
+	    order.addSystemValue(5, "sv5 value"); //Set index (1-89) of system variable and value
+	    order.addNumericValue(3, 45.4); //Set index (1 or 2) of numeric system variable and value (numeric format)
 	
 		AdformTrackingSdk.startTracking(this, Tracking_ID);
+	```
     		
 ## Sending custom app events    		
 To create an event, first you need to create a TrackPoint with `Tracking_ID`. Note that `startTracking` should occur before event sending.
 
-	TrackPoint trackPoint = new TrackPoint(Tracking_ID);
+```java
+TrackPoint trackPoint = new TrackPoint(Tracking_ID);
+```
 	
-Also some advanced integrations are available, like custom parameter or using custom application name setting. 
+Also some advanced integrations are available, like custom variables or using custom application name setting. 
 
 * Setting custom application name: 
 
+	```java
 		trackPoint.setAppName("custom application name");
-		
-* Adding custom parameters (`key` values should be the same as it is in Adform data exports, for example sv1, sv2..sv89, var1, var2...var10, sales, orderid, etc.):
+	```
 	
-		Map<String, String> map = new HashMap();
-		map.put("key1", "value");
-		map.put("key2", "value");
-		map.put("key3", "value");
-		trackPoint.setParameters(map);
+* In order to send custom variables you need to create `Order` object and set your order values. When defining variables it's required to keep in mind, that there are different type of variables:
+	
+  * Custom variables with predefined names (orderid, currency, firstname, etc.)
+  * Custom variables (var1-var10)
+  * System variables (sv1-sv89)
+  * Numeric system variables (svn1, svn2)
+
+
+	```java
+		Order order = new Order();
+		order.setCurrency("currency");
+		order.setOrderStatus("order status");
+		order.setEmail("email");
+		order.setFirstName("name");
+		order.setLastName("last name");
+		order.setAddress1("address 1");
+		order.setAddress2("address 2");
+		order.setPhone("phone");
+		order.setZip("zip");
+		order.setCountry("country");
+		order.setAgeGroup("age group");
+		order.setGender("gender");
+		order.setOrderId("order id");
+		order.setSale(44.54); //numeric format
+		
+		// You can also set other custom variables.
+	    order.addCustomValue(1, "var1 value"); //Set index (1-10) of custom variable and value
+	    order.addSystemValue(5, "sv5 value"); //Set index (1-89) of system variable and value
+	    order.addNumericValue(3, 45.4); //Set index (1 or 2) of numeric system variable and value (numeric format)
+		
+		//Set created order for the trackpoint
+		trackPoint.setOrder(order);
+		
+	```
 
 * Setting custom tracking point name:
-	
+
+	```java
 		trackPoint.setSectionName("Tracking point name");
-		
+	```
+	
 To send prepared track point, just use `sendTrackPoint`.
 
-	AdformTrackingSdk.sendTrackPoint(trackPoint);
+```java
+AdformTrackingSdk.sendTrackPoint(trackPoint);
+```
 
 ![alt tag](screenshots/Screenshot 2014-10-03 13.19.17.png)
 
 Also it is posible to send additional product variables information with tracking points. To do so you need to create 'ProductItem' object and set your product values. Then add that object to the trackpoint.
 
+```java
 	ProductItem productItem = new ProductItem();
-    	productItem.setProductId("Product ID");
-        productItem.setProductName("Product name");
-        productItem.setCategoryId("Category ID");
-        productItem.setCategoryName("Category name");
-        productItem.setProductCount("Product count");
-        productItem.setProductSales("Product sales");
-        productItem.setWeight("Weight");
-        productItem.setStep("Step");
-        productItem.setCustom("Custom information");
+	productItem.setProductId("Product ID");
+    productItem.setProductName("Product name");
+    productItem.setCategoryId("Category ID");
+    productItem.setCategoryName("Category name");
+    productItem.setProductCount("Product count");
+    productItem.setProductSales("Product sales");
+    productItem.setWeight("Weight");
+    productItem.setStep("Step");
+    productItem.setCustom("Custom information");
         
     TrackPoint trackPoint = new TrackPoint(Tracking_ID);
     trackPoint.addProductItem(productItem);
+```
 
 To send multiple product variables with same tracking point, you can use such code:
 
-    	ProductItem productItem1 = new ProductItem();
-    	productItem1.setProductId("Product ID");
-        productItem1.setProductName("Product name");
-        productItem1.setCategoryId("Category ID");
-        productItem1.setCategoryName("Category name");
-        productItem1.setProductCount("Product count");
-        productItem1.setProductSales("Product sales");
-        productItem1.setWeight("Weight");
-        productItem1.setStep("Step");
-        productItem1.setCustom("Custom information");
+```java
+	ProductItem productItem1 = new ProductItem();
+	productItem1.setProductId("Product ID");
+    productItem1.setProductName("Product name");
+    productItem1.setCategoryId("Category ID");
+    productItem1.setCategoryName("Category name");
+    productItem1.setProductCount("Product count");
+    productItem1.setProductSales("Product sales");
+    productItem1.setWeight("Weight");
+    productItem1.setStep("Step");
+    productItem1.setCustom("Custom information");
         
-        
-    	ProductItem productItem2 = new ProductItem();
-    	productItem2.setProductId("Product ID");
-        productItem2.setProductName("Product name");
-        productItem2.setCategoryId("Category ID");
-        productItem2.setCategoryName("Category name");
-        productItem2.setProductCount("Product count");
-        productItem2.setProductSales("Product sales");
-        productItem2.setWeight("Weight");
-        productItem2.setStep("Step");
-        productItem2.setCustom("Custom information");
+	ProductItem productItem2 = new ProductItem();
+	productItem2.setProductId("Product ID");
+    productItem2.setProductName("Product name");
+    productItem2.setCategoryId("Category ID");
+    productItem2.setCategoryName("Category name");
+    productItem2.setProductCount("Product count");
+    productItem2.setProductSales("Product sales");
+    productItem2.setWeight("Weight");
+    productItem2.setStep("Step");
+    productItem2.setCustom("Custom information");
         
     TrackPoint trackPoint = new TrackPoint(Tracking_ID);
     trackPoint.addProductItem(productItem1);
     trackPoint.addProductItem(productItem2);
+```
     
 # Custom Adform Tracking SDK implementations
 
 ## Enable/Disable tracking
 You can enable/disable tracking by calling `setEnabled(boolean)` method.
 
+```java
 	AdformTrackingSdk.setEnabled(true);
+```
 	
 ## Enable/Disable HTTPS
 You can enable/disable HTTPS protocol by calling `setHttpsEnabled(boolean)` method. By default HTTPS is enabled.
 
+```java
 	AdformTrackingSdk.setHttpsEnabled(true);
+```
 	
 ## Enable/Disable SIM card state tracking
 You can enable/disable tracking by calling `setSendSimCardStateEnabled(boolean)` method. By default SIM card state tracking is disabled.
 
+```java
 	AdformTrackingSdk.setSendSimCardStateEnabled(true);
+```
 
+## Information sending to multiple clients
+
+It is possible to send tracking information to multiple clients by defining each client Tracking id. 
+
+In order to start tracking, please use an example below:
+
+```java
+	 AdformTrackingSdk.startTracking(this, Tracking_ID1, Tracking_ID2, Tracking_ID3, ...);
+```
+To send custom tracking points for multiple clients, use the following example:
+
+```java
+      MultipleTrackPointsBuilder multipleTrackPointsBuilder = new MultipleTrackPointsBuilder();
+         
+      multipleTrackPointsBuilder
+     		.setAppName("App name")
+            .setSectionName("Section name");
+            .setOrder(yourOrder);
+
+      TrackPoint[] trackPoints = multipleTrackPointsBuilder.generateTrackPoints(Tracking_ID1, Tracking_ID2, Tracking_ID3, ...);
+
+      AdformTrackingSdk.sendTrackPoints(trackPoints);
+```
+
+# Migration guide
+
+## Upgrading to 1.1
+
+In SDK version 1.1 was added functionality, which requires additional changes during update from older versions:
+
+* Method `setParameters()` of `TrackPoint` class has been deprecated. Instead please use `setOrder()` method to set custom variables to tracking points.
 
