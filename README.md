@@ -142,7 +142,7 @@ Also some advanced integrations are available, like custom variables or using cu
 		order.setAddress1("address 1");
 		order.setAddress2("address 2");
 		order.setPhone("phone");
-		order.setBasketSize(7);
+		order.setBasketSize(7); //numeric format
 		order.setZip("zip");
 		order.setCountry("country");
 		order.setAgeGroup("age group");
