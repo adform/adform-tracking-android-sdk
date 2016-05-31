@@ -106,6 +106,8 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
 	    order.addSystemValue(5, "sv5 value"); //Set index (1-89) of system variable and value
 	    order.addNumericValue(3, 45.4); //Set index (1 or 2) of numeric system variable and value (numeric format)
 	
+		AdformTrackingSdk.setOrder(order);
+	
 		AdformTrackingSdk.startTracking(this, Tracking_ID);
 	```
     		
