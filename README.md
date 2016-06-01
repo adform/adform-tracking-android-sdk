@@ -279,4 +279,5 @@ To send custom tracking points for multiple clients, use the following example:
 In SDK version 1.1 was added functionality, which requires additional changes during update from older versions:
 
 * Method `setParameters()` of `TrackPoint` class has been deprecated. Instead please use `setOrder()` method to set custom variables to tracking points.
+* Add Protobuf library. You could find how to do that [here](https://github.com/adform/adform-tracking-android-sdk#2-setting-up-library-dependencies)
 
