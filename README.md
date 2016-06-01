@@ -248,7 +248,7 @@ You can enable/disable tracking by calling `setSendSimCardStateEnabled(boolean)`
 	AdformTrackingSdk.setSendSimCardStateEnabled(true);
 ```
 
-## Send inforamtion to multiple clients
+## Send information to multiple clients
 
 It is possible to send tracking information to multiple clients by defining each client Tracking id. 
 
