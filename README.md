@@ -25,7 +25,7 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 	    ...
         dependencies {
 		    compile 'com.google.android.gms:play-services-ads:8.1.0'
-    		compile 'com.adform.tracking.sdk:adform-tracking-sdk:1.1.0'
+    		compile 'com.adform.tracking.sdk:adform-tracking-sdk:1.1.1'
 		    compile 'com.google.protobuf:protobuf-java:2.6.1'
         }
         ...
