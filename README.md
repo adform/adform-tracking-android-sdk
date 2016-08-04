@@ -11,7 +11,9 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 
 ### 1.1. Plugins
 
-Tracking SDK is also available on Unity platform. You can find documentation [here] (https://github.com/adform/adform-tracking-sdk-unity-plugin). 
+Tracking SDK is also available on these platforms:
+
+#### [Unity}(https://github.com/adform/adform-tracking-sdk-unity-plugin). 
 
 ## 2. Setting up library dependencies
 
