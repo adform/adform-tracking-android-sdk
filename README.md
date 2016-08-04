@@ -9,6 +9,10 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 
 ![alt tag](screenshots/Screenshot 2014-10-03 12.24.14.png)
 
+### 1.1. Plugins
+
+Tracking SDK is also available on Unity platform. You can find documentation [here] (https://github.com/adform/adform-tracking-sdk-unity-plugin). 
+
 ## 2. Setting up library dependencies
 
 * To add a library to the dependencies, first we need to specify repository location. This can be done by editing `build.gradle` file and by inserting snippet (specified below) right above the `android` configuration group. 
