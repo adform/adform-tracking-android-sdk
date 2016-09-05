@@ -14,6 +14,7 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 Tracking SDK is also available on these platforms:
 
 * ***[Unity](https://github.com/adform/adform-tracking-sdk-unity-plugin)***
+* ***[Unity](https://github.com/adform/adform-tracking-sdk-xamarin/wiki/xamarin-android-integration-guide)***
 
 ## 2. Setting up library dependencies
 
