@@ -255,6 +255,13 @@ You can enable/disable tracking by calling `setSendSimCardStateEnabled(boolean)`
 	AdformTrackingSdk.setSendSimCardStateEnabled(true);
 ```
 
+## Enable/Disable Facebook attribution id tracking
+You can enable/disable tracking by calling `setFacebookAttributionIdTrackingEnabled(boolean)` method. By default facebook attribution id tracking is enabled.
+
+```java
+	AdformTrackingSdk.setFacebookAttributionIdTrackingEnabled(false);
+```
+
 ## Send information to multiple clients
 
 It is possible to send tracking information to multiple clients by defining each client Tracking id. 
