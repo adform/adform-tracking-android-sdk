@@ -32,7 +32,7 @@ Tracking SDK is also available on these platforms:
 	    ...
         dependencies {
 		    compile 'com.google.android.gms:play-services-ads:8.1.0'
-    		compile 'com.adform.tracking.sdk:adform-tracking-sdk:1.1.7'
+    		compile 'com.adform.tracking.sdk:adform-tracking-sdk:1.1.8'
 		    compile 'com.google.protobuf:protobuf-java:2.6.1'
         }
         ...
