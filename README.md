@@ -269,7 +269,7 @@ It is possible to set GDPR and GDPR consent manually. You need to use `setGdpr(b
 
 
 ```java
-	AdformTrackingSdk.setGdpr(true);
+    AdformTrackingSdk.setGdpr(true);
     AdformTrackingSdk.setGdprConsent(Base64.encodeToString("GgdprConsent".getBytes(), Base64.NO_WRAP));
 ```
 
