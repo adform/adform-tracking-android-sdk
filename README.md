@@ -263,7 +263,7 @@ You can enable/disable tracking by calling `setFacebookAttributionIdTrackingEnab
 ```
 
 ## GDPR
-By default Adform Tracking SDK will check CMP settings and use that information. More information about this here
+By default Adform Tracking SDK will check CMP settings and use that information. More information about this [here](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Mobile%20In-App%20Consent%20APIs%20v1.0%20Draft%20for%20Public%20Comment.md)
 
 It is possible to set GDPR and GDPR consent manually. You need to use `setGdpr(boolean)` and `setGdprConsent(consent)` methods. For Gdpr consent you need to set base64-encoded string.
 
