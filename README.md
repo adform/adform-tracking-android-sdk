@@ -262,6 +262,17 @@ You can enable/disable tracking by calling `setFacebookAttributionIdTrackingEnab
 	AdformTrackingSdk.setFacebookAttributionIdTrackingEnabled(false);
 ```
 
+## GDPR
+By default Adform Tracking SDK will check CMP settings and use that information. More information about this here
+
+It is possible to set GDPR and GDPR consent manually. You need to use `setGdpr(boolean)` and `setGdprConsent(consent)` methods. For Gdpr consent you need to set base64-encoded string.
+
+
+```java
+	AdformTrackingSdk.setGdpr(true);
+    AdformTrackingSdk.setGdprConsent(Base64.encodeToString("GgdprConsent".getBytes(), Base64.NO_WRAP));
+```
+
 ## Send information to multiple clients
 
 It is possible to send tracking information to multiple clients by defining each client Tracking id. 
