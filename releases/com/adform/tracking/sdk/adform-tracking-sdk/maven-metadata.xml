@@ -3,7 +3,7 @@
   <groupId>com.adform.tracking.sdk</groupId>
   <artifactId>adform-tracking-sdk</artifactId>
   <versioning>
-    <release>1.1.8</release>
+    <release>1.2.0</release>
     <versions>
       <version>0.1.5</version>
       <version>0.2.0</version>
@@ -23,7 +23,8 @@
       <version>1.1.6</version>
       <version>1.1.7</version>
       <version>1.1.8</version>
+      <version>1.2.0</version>
     </versions>
-    <lastUpdated>20180305100906</lastUpdated>
+    <lastUpdated>20180525074730</lastUpdated>
   </versioning>
 </metadata>
