@@ -7,7 +7,7 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 * Adform Tracking SDK runs on Android 2.3.* (API 10), so created project version should be 2.3.* (API 10) and above
 * Also the instructions described here are done on IntelliJ 13.1. These instructions should be compatible with Android Studio also
 
-![alt tag](screenshots/Screenshot 2014-10-03 12.24.14.png)
+![alt text](https://raw.githubusercontent.com/adform/adform-tracking-android-sdk/master/screenshots/Screenshot%202014-10-03%2012.24.14.png)
 
 ### 1.1. Plugins
 
@@ -39,7 +39,7 @@ Tracking SDK is also available on these platforms:
         
 * How to add Google Play Services to Your Project please follow these instructions: https://developer.android.com/google/play-services/setup.html#Setup
 
-![alt tag](screenshots/Screenshot 2014-12-29 13.49.27.png)
+![alt tag](https://raw.githubusercontent.com/adform/adform-tracking-android-sdk/master/screenshots/Screenshot%202014-12-29%2013.49.27.png)
 
 ## 3. Update AndroidManifest.xml
 
@@ -62,7 +62,7 @@ Tracking SDK is also available on these platforms:
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
             
-![alt tag](screenshots/Screenshot 2014-12-19 17.45.33.png)
+![alt tag](https://raw.githubusercontent.com/adform/adform-tracking-android-sdk/master/screenshots/Screenshot%202014-12-19%2017.45.33.png)
 
 Now you are set to use sdk. 
 
@@ -96,7 +96,7 @@ Also, AdformTrackingSdk needs methods that would indicate of application activit
 ```
     
 
-![alt tag](screenshots/Screenshot 2014-10-10 13.35.08.png)
+![alt tag](https://raw.githubusercontent.com/adform/adform-tracking-android-sdk/master/screenshots/Screenshot%202014-10-10%2013.35.08.png)
  
  * Optionally you can set custom application name and custom variables before calling `startTracking:`.
 	
@@ -182,7 +182,7 @@ To send prepared track point, just use `sendTrackPoint`.
 AdformTrackingSdk.sendTrackPoint(trackPoint);
 ```
 
-![alt tag](screenshots/Screenshot 2014-10-03 13.19.17.png)
+![alt tag](https://raw.githubusercontent.com/adform/adform-tracking-android-sdk/master/screenshots/Screenshot%202014-10-03%2013.19.17.png)
 
 Also it is posible to send additional product variables information with tracking points. To do so you need to create 'ProductItem' object and set your product values. Then add that object to the trackpoint.
 
