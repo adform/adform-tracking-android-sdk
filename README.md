@@ -161,9 +161,9 @@ Also some advanced integrations are available, like custom variables or using cu
 		order.setSale(44.54); //numeric format
 		
 		// You can also set other custom variables.
-	    order.addCustomValue(1, "var1 value"); //Set index (1-10) of custom variable and value
-	    order.addSystemValue(5, "sv5 value"); //Set index (1-89) of system variable and value
-	    order.addNumericValue(3, 45.4); //Set index (1 or 2) of numeric system variable and value (numeric format)
+	        order.addCustomValue(1, "var1 value"); //Set index (1-10) of custom variable and value
+	        order.addSystemValue(5, "sv5 value"); //Set index (1-89) of system variable and value
+	        order.addNumericValue(3, 45.4); //Set index (1 or 2) of numeric system variable and value (numeric format)
 		
 		//Set created order for the trackpoint
 		trackPoint.setOrder(order);
@@ -187,8 +187,8 @@ AdformTrackingSdk.sendTrackPoint(trackPoint);
 Also it is posible to send additional product variables information with tracking points. To do so you need to create 'ProductItem' object and set your product values. Then add that object to the trackpoint.
 
 ```java
-	ProductItem productItem = new ProductItem();
-	productItem.setProductId("Product ID");
+    ProductItem productItem = new ProductItem();
+    productItem.setProductId("Product ID");
     productItem.setProductName("Product name");
     productItem.setCategoryId("Category ID");
     productItem.setCategoryName("Category name");
@@ -205,26 +205,26 @@ Also it is posible to send additional product variables information with trackin
 To send multiple product variables with same tracking point, you can use such code:
 
 ```java
-	ProductItem productItem1 = new ProductItem();
-	productItem1.setProductId("Product ID");
+    ProductItem productItem1 = new ProductItem();
+    productItem1.setProductId("Product ID");
     productItem1.setProductName("Product name");
     productItem1.setCategoryId("Category ID");
     productItem1.setCategoryName("Category name");
-    productItem1.setProductCount("Product count");
-    productItem1.setProductSales("Product sales");
-    productItem1.setWeight("Weight");
-    productItem1.setStep("Step");
+    productItem1.setProductCount(1);
+    productItem1.setProductSales(1D);
+    productItem1.setWeight(1);
+    productItem1.setStep(Byte.MIN_VALUE);
     productItem1.setCustom("Custom information");
         
-	ProductItem productItem2 = new ProductItem();
-	productItem2.setProductId("Product ID");
+    ProductItem productItem2 = new ProductItem();
+    productItem2.setProductId("Product ID");
     productItem2.setProductName("Product name");
     productItem2.setCategoryId("Category ID");
     productItem2.setCategoryName("Category name");
-    productItem2.setProductCount("Product count");
-    productItem2.setProductSales("Product sales");
-    productItem2.setWeight("Weight");
-    productItem2.setStep("Step");
+    productItem2.setProductCount(1);
+    productItem2.setProductSales(1D);
+    productItem2.setWeight(1);
+    productItem2.setStep(Byte.MIN_VALUE);
     productItem2.setCustom("Custom information");
         
     TrackPoint trackPoint = new TrackPoint(Tracking_ID);
