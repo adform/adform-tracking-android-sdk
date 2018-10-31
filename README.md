@@ -238,28 +238,28 @@ To send multiple product variables with same tracking point, you can use such co
 You can enable/disable tracking by calling `setEnabled(boolean)` method.
 
 ```java
-	AdformTrackingSdk.setEnabled(true);
+    AdformTrackingSdk.setEnabled(true);
 ```
 	
 ## Enable/Disable HTTPS
 You can enable/disable HTTPS protocol by calling `setHttpsEnabled(boolean)` method. By default HTTPS is enabled.
 
 ```java
-	AdformTrackingSdk.setHttpsEnabled(true);
+    AdformTrackingSdk.setHttpsEnabled(true);
 ```
 	
 ## Enable/Disable SIM card state tracking
 You can enable/disable tracking by calling `setSendSimCardStateEnabled(boolean)` method. By default SIM card state tracking is disabled.
 
 ```java
-	AdformTrackingSdk.setSendSimCardStateEnabled(true);
+    AdformTrackingSdk.setSendSimCardStateEnabled(true);
 ```
 
 ## Enable/Disable Facebook attribution id tracking
 You can enable/disable tracking by calling `setFacebookAttributionIdTrackingEnabled(boolean)` method. By default facebook attribution id tracking is enabled.
 
 ```java
-	AdformTrackingSdk.setFacebookAttributionIdTrackingEnabled(false);
+    AdformTrackingSdk.setFacebookAttributionIdTrackingEnabled(false);
 ```
 
 ## GDPR
@@ -273,6 +273,13 @@ It is possible to set GDPR and GDPR consent manually. You need to use `setGdpr(b
     AdformTrackingSdk.setGdprConsent(Base64.encodeToString("GgdprConsent".getBytes(), Base64.NO_WRAP));
 ```
 
+## Set user agent
+You can change webview user agent string. Webview is used to send tracking data. 
+
+```java
+    AdformTrackingSdk.setUserAgent("Custom User Agent");
+```
+
 ## Send information to multiple clients
 
 It is possible to send tracking information to multiple clients by defining each client Tracking id. 
@@ -280,21 +287,21 @@ It is possible to send tracking information to multiple clients by defining each
 In order to start tracking, please use an example below:
 
 ```java
-	 AdformTrackingSdk.startTracking(this, Tracking_ID1, Tracking_ID2, Tracking_ID3, ...);
+    AdformTrackingSdk.startTracking(this, Tracking_ID1, Tracking_ID2, Tracking_ID3, ...);
 ```
 To send custom tracking points for multiple clients, use the following example:
 
 ```java
-      MultipleTrackPointsBuilder multipleTrackPointsBuilder = new MultipleTrackPointsBuilder();
-         
-      multipleTrackPointsBuilder
-     		.setAppName("App name")
-            .setSectionName("Section name");
-            .setOrder(yourOrder);
+    MultipleTrackPointsBuilder multipleTrackPointsBuilder = new MultipleTrackPointsBuilder();
 
-      TrackPoint[] trackPoints = multipleTrackPointsBuilder.generateTrackPoints(Tracking_ID1, Tracking_ID2, Tracking_ID3, ...);
+   multipleTrackPointsBuilder
+		.setAppName("App name")
+	    .setSectionName("Section name");	
+	    .setOrder(yourOrder);
 
-      AdformTrackingSdk.sendTrackPoints(trackPoints);
+    TrackPoint[] trackPoints = multipleTrackPointsBuilder.generateTrackPoints(Tracking_ID1, Tracking_ID2, Tracking_ID3, ...);
+
+    AdformTrackingSdk.sendTrackPoints(trackPoints);
 ```
 
 # Migration guide
