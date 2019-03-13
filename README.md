@@ -4,7 +4,7 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 
 ## 1. General Info
 
-* Adform Tracking SDK runs on Android 2.3.* (API 10), so created project version should be 2.3.* (API 10) and above
+* Adform Tracking SDK runs on Android 3.0 (API 11), so created project version should be 3.0 (API 11) and above
 * Also the instructions described here are done on IntelliJ 13.1. These instructions should be compatible with Android Studio also
 
 ![alt text](https://raw.githubusercontent.com/adform/adform-tracking-android-sdk/master/screenshots/Screenshot%202014-10-03%2012.24.14.png)
