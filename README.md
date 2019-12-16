@@ -316,7 +316,6 @@ In SDK version 1.1 was added functionality, which requires additional changes du
 # Publishing events using Adobe experience SDK
 
 ## Set-up Adobe experience platform
-
 - To use Adobe experience sdk you'll have to integrate the Adobe experience sdk first
 - Then install `Adform mobile extenesion` in Adobe experience cloud platform
 
@@ -333,8 +332,8 @@ In SDK version 1.1 was added functionality, which requires additional changes du
   - Add `AdformTrackingSdk` and `AdformAdobeExtension` libraries to dependencies
   
 ```
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:1.3.1"
-    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:1.3.1"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:1.3.2"
+    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:1.3.2"
 ```
 
 - Initialize Adobe and their extensions in main app `Application` class
@@ -409,6 +408,13 @@ public class DemoApp extends Application {
         });
 ```
 
+- Again, the easiest way to send existing `TrackPoint` is to use this convenience method: 
+
+```
+final Map<String, String> eventMap = AdformAdobeEventConverter.toEventMap(trackPoint);
+MobileCore.trackAction("action", eventMap);
+```
+
 - If you don't have created events for Adform, there is more generic way of sending those events
 
 ```
@@ -418,20 +424,16 @@ public class DemoApp extends Application {
                 // Launching new event through Adobe experience sdk
                 // Forming basic TrackPoint
                 final Map<String, String> eventMap = new HashMap<>();
-                eventMap.put(AdformAdobeBridge.TP_KEY_ID, "trackPointId");
+                eventMap.put(AdformAdobeBridge.TP_KEY_ID, AdformAdobeExtension.getTrackingId());
                 eventMap.put(AdformAdobeBridge.TP_KEY_APP_NAME, "appName");
                 eventMap.put(AdformAdobeBridge.TP_KEY_PARAMETERS_NAME, "parametersName");
 
                 // Adding order
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_ORDER_ID, "111");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_SALE, "2.0");
-                eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_EMAIL, "email");
-                eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_FIRSTNAME, "firstname");
-                eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_LASTNAME, "lastname");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_ADDRESS1, "address1");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_ADDRESS2, "address2");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_PHONE, "phone_number");
-                eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_ZIP, "zip");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_COUNTRY, "en-gb");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_AGE_GROUP, "12-24");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_GENDER, "female");
