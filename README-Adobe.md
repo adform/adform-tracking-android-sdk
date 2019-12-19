@@ -158,3 +158,8 @@ MobileCore.trackAction("action", eventMap);
         });
     }
 ```
+
+## Verifying
+Once implementation is done successfully, tracked actions should be sent to Adform when triggered by using the App.
+
+You can log in to Adform, go to Site Tracking of the account you have added the tracking ID of and see tracking points created based on the event names sent from the SDK. Adform tracking points can be found here https://www.adform.com/TrackingSetup/#/trackingPoints
