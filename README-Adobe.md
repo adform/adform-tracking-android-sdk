@@ -1,6 +1,10 @@
 # Adform extension for Adobe experience SDK
 Track marketing events for Adform platform using Adobe experience SDK
 
+## TLDR;
+- Steps how to integrate Adobe + Adform tracking libraries into the project
+- Sample project can be found here https://github.com/adform/adform-tracking-android-sdk/tree/master/sample-adobe-ext
+
 ## Features
 - All events sent to Adobe platform will be routed to Adform as well
 - Easily convert Adform's `TrackPoint` to Adobe events
