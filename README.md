@@ -388,7 +388,7 @@ public class DemoApp extends Application {
     }
 ```
 
-- There are a could of ways to send events through Adobe, if you already have Adform integrated, there are convenience methods to form events to send them through Adobe
+- Number of ways to send events through Adobe. If you already have Adform integrated, there are convenience methods to form events to send them through Adobe
 
 ```
         findViewById(R.id.view_button1).setOnClickListener(new View.OnClickListener() {
