@@ -1,5 +1,6 @@
 # Adform extension for Adobe experience SDK
-Track marketing events for Adform platform using Adobe experience SDK
+Track marketing events for Adform platform using Adobe experience SDK. Tracking
+events are sent to Adobe and Adform platforms using this SDK.
 
 ## TLDR;
 - Steps how to integrate Adobe + Adform tracking libraries into the project
@@ -18,7 +19,7 @@ Track marketing events for Adform platform using Adobe experience SDK
 - Install `Adform mobile extension` in Adobe experience cloud platform
 
 ## Set-up Android platform
-- Adobe experience platform integration first by the rules provided on their platform. Or follow these directions: 
+- Setup Adobe experience platform integration first by the rules provided on their platform. Or follow these instructions: 
 
 - Add Adobe dependencies to `build.gradle`
 
@@ -89,7 +90,7 @@ public class DemoApp extends Application {
     }
 ```
 
-- Number of ways to send events through Adobe. If you already have Adform integrated, there are convenience methods to form events to send them through Adobe
+- There are number of ways to send events through Adobe. If you already have Adform tracking SDK integrated, there are several convenient methods to form events and send them through Adobe.
 
 ```
         findViewById(R.id.view_button1).setOnClickListener(new View.OnClickListener() {
@@ -109,7 +110,7 @@ public class DemoApp extends Application {
         });
 ```
 
-- Again, the easiest way to send existing `TrackPoint` is to use this convenience method: 
+- The easiest way to send existing `TrackPoint` is to use this method: 
 
 ```
 final Map<String, String> eventMap = AdformAdobeEventConverter.toEventMap(trackPoint);
@@ -126,6 +127,7 @@ MobileCore.trackAction("action", eventMap);
                 // Forming basic TrackPoint
                 final Map<String, String> eventMap = new HashMap<>();
                 eventMap.put(AdformAdobeBridge.TP_KEY_ID, AdformAdobeExtension.getTrackingId());
+                // Optionally you can define custom app name
                 eventMap.put(AdformAdobeBridge.TP_KEY_APP_NAME, "appName");
                 eventMap.put(AdformAdobeBridge.TP_KEY_PARAMETERS_NAME, "parametersName");
 
@@ -153,6 +155,7 @@ MobileCore.trackAction("action", eventMap);
                 eventMap.put(AdformAdobeBridge.TP_PRODUCT_KEY_PRODUCT_COUNT, "5");
                 eventMap.put(AdformAdobeBridge.TP_PRODUCT_KEY_CUSTOM, "custom");
 
+                // Sending the event with custom tracking point name
                 MobileCore.trackAction("action", eventMap);
             }
         });
