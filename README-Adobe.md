@@ -131,7 +131,7 @@ MobileCore.trackAction("action", eventMap);
                 eventMap.put(AdformAdobeBridge.TP_KEY_APP_NAME, "appName");
                 eventMap.put(AdformAdobeBridge.TP_KEY_PARAMETERS_NAME, "parametersName");
 
-                // Adding order
+                // Optionally your can add order
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_ORDER_ID, "111");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_SALE, "2.0");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_ADDRESS1, "address1");
@@ -144,7 +144,7 @@ MobileCore.trackAction("action", eventMap);
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_STATUS, "status");
                 eventMap.put(AdformAdobeBridge.TP_ORDER_KEY_BASKET_SIZE, "5");
 
-                // Adding product item
+                // Optionally your can add product item
                 eventMap.put(AdformAdobeBridge.TP_PRODUCT_KEY_CATEGORY_NAME, "cat_name");
                 eventMap.put(AdformAdobeBridge.TP_PRODUCT_KEY_CATEGORY_ID, "111");
                 eventMap.put(AdformAdobeBridge.TP_PRODUCT_KEY_PRODUCT_NAME, "prod_name");
