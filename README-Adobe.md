@@ -1,6 +1,5 @@
 # Adform extension for Adobe experience SDK
-Track marketing events for Adform platform using Adobe experience SDK. Tracking
-events are sent to Adobe and Adform platforms using this SDK.
+Track marketing events for Adform platform using Adobe experience SDK. Tracking events are sent to Adobe and Adform platforms using this SDK.
 
 ## TLDR;
 - Steps how to integrate Adobe + Adform tracking libraries into the project
@@ -19,7 +18,7 @@ events are sent to Adobe and Adform platforms using this SDK.
 - Install `Adform mobile extension` in Adobe experience cloud platform
 
 ## Set-up Android platform
-- Setup Adobe experience platform integration first by the rules provided on their platform. Or follow these instructions: 
+- Setup Adobe experience platform integration first by the rules provided on their platform. Or follow these instructions:
 
 - Add Adobe dependencies to `build.gradle`
 
@@ -37,8 +36,8 @@ repositories {
     maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
 }
 dependencies {
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:1.3.3"
-    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:1.3.3"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:1.4.1"
+    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:1.4.1"
 }
 ```
 
@@ -110,7 +109,7 @@ public class DemoApp extends Application {
         });
 ```
 
-- The easiest way to send existing `TrackPoint` is to use this method: 
+- The easiest way to send existing `TrackPoint` is to use this method:
 
 ```
 final Map<String, String> eventMap = AdformAdobeEventConverter.toEventMap(trackPoint);

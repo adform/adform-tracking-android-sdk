@@ -28,12 +28,12 @@ Tracking SDK is also available on these platforms:
 
 
 * Then in the dependency group we need to specify that we will be using `AdformTrackingSdk`, and also add `Google Play Ads` service with `Protobuf` library.
-		
-	    ...
+
+
         dependencies {
-		    compile 'com.google.android.gms:play-services-ads:8.1.0'
-    	    compile 'com.adform.tracking.sdk:adform-tracking-sdk:1.4.0'
-		    compile 'com.google.protobuf:protobuf-java:2.6.1'
+            compile 'com.google.android.gms:play-services-ads:8.1.0'
+            compile 'com.adform.tracking.sdk:adform-tracking-sdk:1.4.1'
+            compile 'com.google.protobuf:protobuf-java:2.6.1'
         }
         ...
         
