@@ -161,6 +161,25 @@ MobileCore.trackAction("action", eventMap);
     }
 ```
 
+- You can always use Adobe's '.trackState()' as well, though in Adform tracking SDK it works exactly the same, as you would use '.trackAction()'.
+
+```
+findViewById(R.id.view_button4).setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        // mandatory
+        TrackPoint tp = new TrackPoint(Long.valueOf(AdformAdobeExtension.getTrackingId()));
+        tp.setSectionName("Tracking point name");   // mandatory
+        tp.setAppName("custom application name");   // optional
+        final Map<String, String> eventMap = AdformAdobeEventConverter
+                .toEventMap(tp);
+
+        // Sending events through Adobe extension
+        MobileCore.trackState(tp.getSectionName(), eventMap);
+    }
+});
+```
+
 ## Verifying
 Once implementation is done successfully, tracked actions should be sent to Adform when triggered by using the App.
 
