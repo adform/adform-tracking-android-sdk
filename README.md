@@ -42,7 +42,7 @@ dependencies {
 }
 ```
 
-![img](screenshots/Screenshot2020-04-2911.10.30.png "Gradle properties")
+![img](screenshots/Screenshot2020-04-2911.13.22.png "Gradle properties")
 
 
 ## 3. Update AndroidManifest.xml
@@ -59,7 +59,7 @@ dependencies {
     android:value="ca-app-pub-3940256099942544~3347511713"/>
 ```
 
-![img](screenshots/Screenshot2020-04-2911.10.19.png "Android manifest")
+![img](screenshots/Screenshot2020-04-2911.13.36.png "Android manifest")
 
 Now you are set to use sdk.
 
