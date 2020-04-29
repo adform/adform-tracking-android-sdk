@@ -33,17 +33,12 @@ repositories {
 }
 ```
 
--   Then in the dependency group we need to specify that we will be using `AdformTrackingSdk`, and also add `Google Play Ads` service with `Protobuf` library.
+-   Then in the dependency group we need to specify that we will be using `AdformTrackingSdk`
     -   Note: SDK uses AndroidX, so your project should use it as well, or you&rsquo;ll have to use older version.
 
 ```java
 dependencies {
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.0@aar"
-    implementation "com.android.support:support-annotations:28.0.0"
-    implementation "com.android.support:appcompat-v7:28.0.0"
-    implementation "com.google.android.gms:play-services-ads:19.1.0"
-    implementation "com.android.installreferrer:installreferrer:1.1.2"
-    implementation "com.google.protobuf:protobuf-lite:3.0.1"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.1@aar"
 }
 ```
 
@@ -53,13 +48,6 @@ dependencies {
 
 
 ## 3. Update AndroidManifest.xml
-
--   Add internet permissions. Update `AndroidManifest.xml` file with snippet shown below between `<manifest></manifest>` tags.
-
-```java
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
 
 -   Add Google GMS service ID .
     -   **Make sure you&rsquo;re using your own ID here**
