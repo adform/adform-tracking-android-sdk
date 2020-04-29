@@ -42,8 +42,6 @@ dependencies {
 }
 ```
 
--   How to add Google Play Services to Your Project please follow these instructions: <https://developer.android.com/google/play-services/setup.html#Setup>
-
 ![img](screenshots/Screenshot2020-04-2717.47.14.png "Gradle properties")
 
 
