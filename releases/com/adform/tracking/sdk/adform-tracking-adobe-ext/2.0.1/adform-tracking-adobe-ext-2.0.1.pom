@@ -12,10 +12,5 @@
       <artifactId>support-annotations</artifactId>
       <version>28.0.0</version>
     </dependency>
-    <dependency>
-      <groupId>com.adobe.marketing.mobile</groupId>
-      <artifactId>sdk-core</artifactId>
-      <version>1.5.3</version>
-    </dependency>
   </dependencies>
 </project>
