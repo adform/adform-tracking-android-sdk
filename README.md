@@ -5,8 +5,8 @@ When you run mobile campaigns, boost of new app installs are often one of the ma
 
 ## 1. General Info
 
--   Adform-tracking-sdk `2.0.0` supports AndroidX.
-    -   If you&rsquo;re not using AndroidX, lowest version that uses &rsquo;Android support packages&rsquo; is `1.4.x`.
+-   Adform-tracking-sdk `2.x` supports AndroidX.
+    -   If you&rsquo;re not using AndroidX, lowest version that uses &rsquo;Android support packages&rsquo; is `1.x`.
     -   All new features will be provided on `2.+`
 -   Versions `2.x` and `1.x` are vastly different, so don&rsquo;t forget to make sure you&rsquo;re following documentation for **correct version**.
 -   If you&rsquo;re upgrading from `1.x` to `2.x`, read the documentation through, as there are multiple things that are done differently
@@ -38,7 +38,7 @@ repositories {
 
 ```java
 dependencies {
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.1@aar"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.2@aar"
 }
 ```
 
