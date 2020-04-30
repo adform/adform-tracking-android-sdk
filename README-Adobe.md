@@ -46,8 +46,8 @@ repositories {
     maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
 }
 dependencies {
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.2@aar"
-    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:2.0.2@aar"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.2"
+    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:2.0.2"
 }
 ```
 
