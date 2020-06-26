@@ -76,6 +76,35 @@ public class MainActivity extends Activity {
                 MobileCore.trackAction("action", eventMap);
             }
         });
+
+        findViewById(R.id.view_button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // mandatory
+                TrackPoint tp = new TrackPoint(Long.valueOf(AdformAdobeExtension.getTrackingId()));
+                tp.setSectionName("Tracking point name");   // mandatory
+                tp.setAppName("custom application name");   // optional
+                final Map<String, String> eventMap = AdformAdobeEventConverter
+                        .toEventMap(tp);
+
+                // Sending events through Adobe extension
+                MobileCore.trackAction(tp.getSectionName(), eventMap);
+            }
+        });
+        findViewById(R.id.view_button4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // mandatory
+                TrackPoint tp = new TrackPoint(Long.valueOf(AdformAdobeExtension.getTrackingId()));
+                tp.setSectionName("Tracking point name");   // mandatory
+                tp.setAppName("custom application name");   // optional
+                final Map<String, String> eventMap = AdformAdobeEventConverter
+                        .toEventMap(tp);
+
+                // Sending events through Adobe extension
+                MobileCore.trackState(tp.getSectionName(), eventMap);
+            }
+        });
     }
 
     @Override

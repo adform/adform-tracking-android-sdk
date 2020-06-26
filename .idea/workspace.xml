@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17e7fb0e-c618-4de6-8421-09c798adead1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/adform-tracking-android-sdk.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/libs/AdformSdk-0.5.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/proguard-rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/java/com/adform/trackingsdk/demoapp/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/java/com/adform/trackingsdk/demoapp/DemoApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/java/com/adform/trackingsdk/demoapp/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/res/drawable-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/res/drawable-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/res/drawable-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/res/drawable-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-adobe-ext/src/main/java/com/adform/trackingsdk/demoapp/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sample-adobe-ext/src/main/java/com/adform/trackingsdk/demoapp/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-adobe-ext/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample-adobe-ext/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-adobe-ext/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample-adobe-ext/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-adobe-ext/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample-adobe-ext/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cUWVw3WLndEipBSF4TJIkkohcp" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17e7fb0e-c618-4de6-8421-09c798adead1" name="Default Changelist" comment="" />
+      <created>1590583679724</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590583679724</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="323" y="-878" width="1071" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593150321314">
+      <screen x="-101" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="323" y="-878" width="1071" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/-101.-1080.1920.1080/0.0.1680.1050@-101.-1080.1920.1080" timestamp="1593150321314" />
+    <state x="691" y="-633" width="502" height="393" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1593150243719">
+      <screen x="-101" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="691" y="-633" width="502" height="393" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/-101.-1080.1920.1080/0.0.1680.1050@-101.-1080.1920.1080" timestamp="1593150243719" />
+  </component>
+</project>
