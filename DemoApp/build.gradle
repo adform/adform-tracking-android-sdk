@@ -1,25 +1,22 @@
 buildscript {
     repositories {
         jcenter()
-        mavenCentral()
         google()
         maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.0'
-        classpath 'com.google.gms:google-services:4.3.3'
     }
 }
 apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "27.0.3"
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 11
         versionName "1.0.0"
         multiDexEnabled true
     }
@@ -35,20 +32,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-    signingConfigs {
-        debug {
-            project.ext.loadSign = false
-        }
-        release {
-            project.ext.loadSign = true
-
-        }
-    }
     buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-        }
-
         release {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
@@ -62,7 +46,6 @@ android {
 
 repositories {
     jcenter()
-    mavenCentral()
     google()
     maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
 }
@@ -71,4 +54,3 @@ dependencies {
     implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.2"
     implementation("androidx.appcompat:appcompat:1.1.0")
 }
-apply plugin: 'com.google.gms.google-services'

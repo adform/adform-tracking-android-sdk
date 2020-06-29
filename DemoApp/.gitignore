@@ -12,6 +12,8 @@ build/
 html/
 *.html
 *.iml
+/workspace.xml
+/.idea/workspace.xml
 
 
 # Created by https://www.gitignore.io/api/etbrains,osx,android,java

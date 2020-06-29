@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
 
+        <!-- Todo Make sure you're using your own ID here
+        Find more info: https://firebase.google.com/docs/admob/android/quick-start#add-app-id-to-androidmanifest-->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
