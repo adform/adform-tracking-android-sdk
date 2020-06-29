@@ -1,20 +1,19 @@
 /local.properties
 .DS_Store
-/.idea
 mykeystore.keystore
 run_script/
 *.apk
 
 # Android Studio
+.idea
 out/
-build/
+/build
 .gradle/
 html/
 *.html
 *.iml
-/workspace.xml
 /.idea/workspace.xml
-
+/.idea/libraries
 
 # Created by https://www.gitignore.io/api/etbrains,osx,android,java
 
