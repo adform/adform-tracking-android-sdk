@@ -38,7 +38,7 @@ repositories {
 
 ```java
 dependencies {
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.2"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.1.0"
 }
 ```
 
@@ -279,6 +279,14 @@ It is possible to set GDPR and GDPR consent manually. You need to use `setGdpr(b
 ```java
 AdformTrackingSdk.setGdpr(true);
 AdformTrackingSdk.setGdprConsent(Base64.encodeToString("GgdprConsent".getBytes(), Base64.NO_WRAP));
+```
+
+## Set US privacy
+
+You can use this method to manually set the US Privacy value.
+
+```java
+AdformTrackingSdk.setUSPrivacy("1---");
 ```
 
 
