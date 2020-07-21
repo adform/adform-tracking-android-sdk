@@ -2,35 +2,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerInParent="true"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.adform.trackingsdk.demoapp.MainActivity">
 
     <Button
         android:id="@+id/view_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send event 1"
+        android:text="Send order event"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/view_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send event 2"
+        android:text="Send order with custom values"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/view_button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send event 3"
+        android:text="Send product event"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/view_button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send event 4"
+        android:text="Send multiple products"
         tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/view_button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send to multiple clients"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>

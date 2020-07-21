@@ -1,0 +1,56 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.0'
+    }
+}
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionName "1.0.0"
+        multiDexEnabled true
+    }
+
+    flavorDimensions "app"
+    productFlavors {
+        dev { }
+        prod { }
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+repositories {
+    jcenter()
+    google()
+    maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
+}
+
+dependencies {
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.0.2"
+    implementation("androidx.appcompat:appcompat:1.1.0")
+}
