@@ -7,6 +7,13 @@
     tools:context="com.adform.trackingsdk.demoapp.MainActivity">
 
     <Button
+        android:id="@+id/view_button0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send simple order event"
+        tools:ignore="HardcodedText" />
+
+    <Button
         android:id="@+id/view_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

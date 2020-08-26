@@ -11,14 +11,25 @@ import com.adform.adformtrackingsdk.entities.Order;
 import com.adform.adformtrackingsdk.entities.ProductItem;
 import com.adform.trackingsdk.simpleapp.R;
 
-import java.util.Arrays;
-
 public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.view_button0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Order order = new Order();
+                order.setCurrency("currency");
+
+                final TrackPoint trackPoint = new TrackPoint(Constants.TRACK_POINT_ID);
+                trackPoint.setSectionName("valid_section_name");
+                trackPoint.setOrder(order);
+
+                AdformTrackingSdk.sendTrackPoint(trackPoint);   // To send prepared track point, just use sendTrackPoint
+            }
+        });
         findViewById(R.id.view_button1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
