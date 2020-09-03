@@ -55,11 +55,11 @@ dependencies {
 ```java
 <!--Sample app ID-->
 <meta-data
-    android:name="com.google.android.gms.ads.APPLICATION_ID"
-    android:value="ca-app-pub-3940256099942544~3347511713"/>
+    android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+    android:value="true"/>
 ```
 
-![img](screenshots/Screenshot2020-04-2911.13.36.png "Android manifest")
+![img](screenshots/Screenshot2020-09-0316.10.09.png "Android manifest")
 
 Now you are set to use sdk.
 
