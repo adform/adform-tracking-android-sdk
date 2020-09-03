@@ -47,8 +47,7 @@ dependencies {
 
 ## 3. Update AndroidManifest.xml
 
--   Add Google GMS service ID .
-    -   **Make sure you&rsquo;re using your own ID here**
+-   Enable AdvertisingId provider
     -   To add - update `AndroidManifest.xml` with snipped shown below between `<application></application>` tags.
     -   Find more info: [Google ad manager docs](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start#update_your_androidmanifestxml)
 
