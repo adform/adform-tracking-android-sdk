@@ -341,3 +341,14 @@ In SDK version 1.1 was added functionality, which requires additional changes du
 Track marketing events for Adform platform using Adobe experience SDK
 
 -   Steps how to integrate Adform-Adobe extension can be found [here](https://github.com/adform/adform-tracking-android-sdk/blob/master/README-Adobe.md)
+
+# Proguard rules
+
+If you are using proguard please add it to your rules:
+
+```
+-keep class com.adform.adformtrackingsdk.entities.** { *; }
+-keep class com.adform.mobile.** { *; }
+-dontwarn com.adform.adformtrackingsdk.entities.**
+-dontwarn com.adform.mobile.**
+```
