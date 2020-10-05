@@ -47,10 +47,9 @@ dependencies {
 
 ## 3. Update AndroidManifest.xml
 
--   Add AdMob App ID .
-    -   **Make sure you&rsquo;re using your own ID here**
-    -   To add - update `AndroidManifest.xml` with snipped shown below between `<application></application>` tags.
-    -   Find more info: [Google ad manager docs](https://firebase.google.com/docs/admob/android/quick-start#add-app-id-to-androidmanifest)
+-   Enable ad manager
+    -   Update `AndroidManifest.xml` with snipped shown below between `<application></application>` tags.
+    -   Find more info: [Google ad manager docs](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start)
 
 ```java
 <!--Sample app ID-->
