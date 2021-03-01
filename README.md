@@ -268,6 +268,13 @@ You can enable/disable tracking by calling `setFacebookAttributionIdTrackingEnab
 AdformTrackingSdk.setFacebookAttributionIdTrackingEnabled(false);
 ```
 
+## Enable/Disable debug logs
+
+By default only ERROR level is enabled, if you want to enable additional logs use `setDebugModeEnabled(boolean)` method
+
+```java
+AdformTrackingSdk.setDebugModeEnabled(true);
+```
 
 ## GDPR
 
