@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.adform.adformtrackingsdk.AdformTrackingSdk;
 import com.adform.adformtrackingsdk.TrackPoint;
 import com.adform.adformtrackingsdk.TrackPointBuilder;
 import com.adform.sdk.AdformAdobeBridge;
@@ -35,7 +36,7 @@ public class MainActivity extends Activity {
                         .build();
                 final Map<String, String> eventMap = AdformAdobeEventConverter
                         .toEventMap(tp);
-                MobileCore.trackAction("action-tmp-3", eventMap);
+                MobileCore.trackAction(tp.getSectionName(), eventMap);
                 Log.d(DemoApp.TAG, "Button press " + Thread.currentThread());
             }
         });
@@ -44,6 +45,8 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // Launching new event through Adobe experience sdk
                 // Forming basic TrackPoint
+                final String trackPointId = AdformAdobeExtension.getTrackingId();
+                final String trackPointSection = "sectionName";
                 final Map<String, String> eventMap = new HashMap<>();
                 eventMap.put(AdformAdobeBridge.TP_KEY_ID, AdformAdobeExtension.getTrackingId());
                 eventMap.put(AdformAdobeBridge.TP_KEY_APP_NAME, "appName");
@@ -73,10 +76,9 @@ public class MainActivity extends Activity {
                 eventMap.put(AdformAdobeBridge.TP_PRODUCT_KEY_PRODUCT_COUNT, "5");
                 eventMap.put(AdformAdobeBridge.TP_PRODUCT_KEY_CUSTOM, "custom");
 
-                MobileCore.trackAction("action", eventMap);
+                MobileCore.trackAction(trackPointSection, eventMap);
             }
         });
-
         findViewById(R.id.view_button3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

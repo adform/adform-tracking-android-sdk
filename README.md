@@ -21,6 +21,7 @@ Tracking SDK is also available on these platforms:
 
 -   ***[Unity](https://github.com/adform/adform-tracking-sdk-unity-plugin)***
 -   ***[Xamarin](https://github.com/adform/adform-tracking-sdk-xamarin/wiki/xamarin-android-integration-guide)***
+-   ***[Adobe extensions](https://github.com/adform/adform-tracking-android-sdk/blob/master/README-Adobe.md)***
 
 
 ## 2. Setting up library dependencies

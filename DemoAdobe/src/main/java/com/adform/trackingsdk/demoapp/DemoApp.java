@@ -29,7 +29,7 @@ public class DemoApp extends Application {
                 @Override
                 public void call(Object o) {
                     Log.d(TAG, "Configuring MobileCore");
-                    MobileCore.configureWithAppID("<APP_ID>");
+                    MobileCore.configureWithAppID("d27f69626000/f57a0f4d3bb7/launch-900eb005ba72-development");
                 }
             });
         } catch (InvalidInitException e) {
