@@ -6,7 +6,7 @@ Track marketing events for Adform platform using Adobe experience SDK. Tracking 
 ## TLDR;
 
 -   Steps how to integrate Adobe + Adform tracking libraries into the project
--   Sample project can be found here [Sample project](https://github.com/adform/adform-tracking-android-sdk/tree/master/sample-adobe-ext)
+-   Sample project can be found here [Sample project](https://github.com/adform/adform-tracking-android-sdk/tree/master/DemoAdobe)
 
 
 ## Features
@@ -46,8 +46,8 @@ repositories {
     maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
 }
 dependencies {
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.4.1"
-    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:2.4.1"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.5.0"
+    implementation "com.adform.tracking.sdk:adform-tracking-adobe-ext:2.5.0"
 }
 ```
 
