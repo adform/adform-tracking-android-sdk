@@ -10,5 +10,6 @@ public class DemoApp extends Application {
     public void onCreate() {
         super.onCreate();
         AdformTrackingSdk.startTracking(this, Constants.TRACK_POINT_ID);
+        AdformTrackingSdk.setDebugModeEnabled(true);
     }
 }

@@ -277,6 +277,9 @@ By default only ERROR level is enabled, if you want to enable additional logs us
 AdformTrackingSdk.setDebugModeEnabled(true);
 ```
 
+- Add filter 'AdformTrackingSdk' to gather reports only from the library
+- Or 'AdformTrackingExtension' for extensions, such as Adobe extension for tracking sdk
+
 ## GDPR
 
 By default Adform Tracking SDK will check CMP settings and use that information. More information about this [here](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Mobile%20In-App%20Consent%20APIs%20v1.0%20Final.md)
