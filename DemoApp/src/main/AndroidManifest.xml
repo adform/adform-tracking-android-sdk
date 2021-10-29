@@ -4,11 +4,13 @@
 
     <application
         android:name="com.adform.trackingsdk.demoapp.DemoApp"
-        android:allowBackup="true"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
 
         <activity
+            android:exported="true"
             android:name="com.adform.trackingsdk.demoapp.MainActivity"
             android:label="@string/app_name">
             <intent-filter>

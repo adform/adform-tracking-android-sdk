@@ -3,3 +3,4 @@
 *.iml
 /.idea
 local.properties
+.java-version
