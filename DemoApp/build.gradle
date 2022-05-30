@@ -5,11 +5,14 @@ buildscript {
         maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath "com.android.tools.build:gradle:4.2.2"
         classpath "com.google.protobuf:protobuf-gradle-plugin:0.8.12"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
     }
 }
-apply plugin: 'com.android.application'
+
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
 
 android {
     compileSdkVersion 31
@@ -29,6 +32,16 @@ android {
     lintOptions {
         abortOnError false
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    sourceSets.all {
+        java.srcDir("src/$name/kotlin")
+    }
 }
 
 repositories {
@@ -40,4 +53,5 @@ repositories {
 dependencies {
     implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.5.0"
     implementation "com.google.android.material:material:1.4.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21"
 }
