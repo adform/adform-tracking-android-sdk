@@ -39,7 +39,7 @@ repositories {
 
 ```java
 dependencies {
-    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.5.2"
+    implementation "com.adform.tracking.sdk:adform-tracking-sdk:2.5.3"
 }
 ```
 
