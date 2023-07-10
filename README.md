@@ -53,10 +53,12 @@ dependencies {
     -   Find more info: [Google ad manager docs](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start)
 
 ```java
-<!--Sample app ID-->
-<meta-data
-    android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-    android:value="true"/>
+  <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy
+
+"/>
 ```
 
 ![img](screenshots/Screenshot2020-09-0316.10.09.png "Android manifest")
