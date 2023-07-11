@@ -45,24 +45,6 @@ dependencies {
 
 ![img](screenshots/Screenshot2020-04-2911.13.22.png "Gradle properties")
 
-
-## 3. Update AndroidManifest.xml
-
--   Enable ad manager
-    -   Update `AndroidManifest.xml` with snipped shown below between `<application></application>` tags.
-    -   Find more info: [Google ad manager docs](https://developers.google.com/ad-manager/mobile-ads-sdk/android/quick-start)
-
-```java
-  <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713 -->
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy
-
-"/>
-```
-
-![img](screenshots/Screenshot2020-09-0316.10.09.png "Android manifest")
-
 Now you are set to use sdk.
 
 
